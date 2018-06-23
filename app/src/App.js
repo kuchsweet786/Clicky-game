@@ -13,23 +13,23 @@ import "./App.css";
 class App extends Component {
     state = {
         wonder,
-        clickedWonder: [],
+        onclickWonder: [],
         score: 0
     };
 
 //when you click on a card ... the wonder is taken out of the array
     imageClick = event => {
         const currentWonder = event.target.alt;
-        const WonderAlreadyClicked =
-            this.state.clickedWonder.indexOf(currentWonder) > -1;
+        const onclick =
+            this.state.onclickWonder.indexOf(currentWonder) > -1;
 
 //if you click on a wonder that has already been selected, the game is reset and cards reordered
-        if (WonderAlreadyClickedAlreadyClicked) {
+        if (wonder.onclick) {
             this.setState({
                 wonder: this.state.wonder.sort(function(a, b) {
                     return 0.5 - Math.random();
                 }),
-                clickedWonder: [],
+                onclickWonder: [],
                 score: 0
             });
             alert("You lose. Play again?");
@@ -41,7 +41,7 @@ class App extends Component {
                     wonder: this.state.wonder.sort(function(a, b) {
                         return 0.5 - Math.random();
                     }),
-                    clickedWonder: this.state.clickedWonder.concat(
+                    onclickWonder: this.state.onclickWonder.concat(
                         currentWonder
                     ),
                     score: this.state.score + 1
@@ -54,7 +54,7 @@ class App extends Component {
                             wonder: this.state.wonder.sort(function(a, b) {
                                 return 0.5 - Math.random();
                             }),
-                            clickedWonder: [],
+                            onclickWonder: [],
                             score: 0
                         });
                     }
