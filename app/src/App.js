@@ -46,7 +46,7 @@ class App extends Component {
                     ),
                     score: this.state.score + 1
                 },
-//if you get all 12 wonder corrent you get a congrats message and the game resets
+//if you get all 7 wonder corrent you get a congrats message and the game resets
                 () => {
                     if (this.state.score === 12) {
                         alert("Yay! You Win!");
